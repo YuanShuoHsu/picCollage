@@ -1,0 +1,13 @@
+.findOutlier {
+    position: relative;
+
+    &__text {
+        padding: 0 10px;
+        color: #fff;
+        font: normal normal 16px/30px sans-serif;
+        white-space: nowrap;
+        letter-spacing: 1px;
+        background: #000;
+        border-radius: 4px;
+    }
+}
