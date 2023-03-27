@@ -6,22 +6,13 @@
 
 .questionTwo {
     position: relative;
-    padding: 10px;
-    box-sizing: border-box;
     width: 80%;
     text-align: start;
     overflow: hidden;
 
     @include desktop() {
-        width: 100%;
-    }
-
-    pre {
-        max-width: 100%;
         padding: 10px;
-        color: #fff;
-        background: #3B4044;
-        border-radius: 4px;
-        overflow: auto hidden;
+        box-sizing: border-box;
+        width: 100%;
     }
 }
