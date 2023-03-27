@@ -1,13 +1,17 @@
 import styles from "./index.module.scss"
 
-import FindOutlier from '../../components/FindOutlier'
+import Header from "../../components/Header"
+import QuestionOne from "../../components/QuestionOne"
+import QuestionTwo from "../../components/QuestionTwo"
 
 export default function Home() {
   return (
     <div className={styles.home}>
-      <div className={styles["home__background"]}></div>
+      <Header />
       <div className={styles["home__main"]}>
-        <FindOutlier />
+        <h2>FE Developer- 1st Call Question</h2>
+        <QuestionOne />
+        <QuestionTwo />
       </div>
     </div>
   )

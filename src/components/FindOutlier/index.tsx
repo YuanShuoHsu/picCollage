@@ -24,6 +24,7 @@ export default function FindOutlier() {
 
   return (
     <div className={styles.findOutlier}>
+      <p>Practice:</p>
       <p className={styles["findOutlier__text"]}>{`${inputString1} => ${findOutlier(inputString1)}`}</p>
       <p className={styles["findOutlier__text"]}>{`${inputString2} => ${findOutlier(inputString2)}`}</p>
     </div>
