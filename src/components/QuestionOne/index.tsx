@@ -30,7 +30,9 @@ function getParity(numbers) {
 
     return (
         <div className={styles.questionOne}>
-            <strong>Question 1</strong>
+            <p>
+                <strong>Question 1</strong>
+            </p>
             <ul>
                 <li>Given a string of integers separated by spaces, return the place of the integer with different parity.</li>
             </ul>
@@ -51,7 +53,7 @@ function getParity(numbers) {
             <pre>
                 <code>{answer}</code>
             </pre>
-            <FindOutlier/>
+            <FindOutlier />
         </div>
     )
 }

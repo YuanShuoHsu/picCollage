@@ -3,7 +3,9 @@ import styles from "./index.module.scss"
 export default function QuestionTwo() {
     return (
         <div className={styles.questionTwo}>
-            <strong>Question 2</strong>
+            <p>
+                <strong>Question 2</strong>
+            </p>
             <ul>
                 <li>If you had three months to build anything, what would it be and why?</li>
             </ul>

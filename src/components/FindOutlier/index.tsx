@@ -1,6 +1,13 @@
+import { useState, ChangeEvent } from "react"
 import styles from "./index.module.scss"
 
 export default function FindOutlier() {
+
+  const [practice, setPractice] = useState("")
+
+  const handleSave = (event: ChangeEvent<HTMLInputElement>) => {
+    setPractice(event.target.value)
+  }
 
   const inputString1 = "10 9 8 6 4 2"
   const inputString2 = "7 9 1 6 3 5"
@@ -25,8 +32,12 @@ export default function FindOutlier() {
   return (
     <div className={styles.findOutlier}>
       <p>Practice:</p>
-      <p className={styles["findOutlier__text"]}>{`${inputString1} => ${findOutlier(inputString1)}`}</p>
-      <p className={styles["findOutlier__text"]}>{`${inputString2} => ${findOutlier(inputString2)}`}</p>
+      <p>{`${inputString1} => ${findOutlier(inputString1)}`}</p>
+      <p>{`${inputString2} => ${findOutlier(inputString2)}`}</p>
+      <div className={styles["findOutlier__box"]}>
+        <input className={styles["findOutlier__box-input"]} onChange={handleSave} value={practice} type="text" />
+        <span>{`=> ${findOutlier(practice)}`}</span>
+      </div>
     </div>
   )
 }
