@@ -36,7 +36,7 @@ export default function FindOutlier() {
       <p>{`${inputString2} => ${findOutlier(inputString2)}`}</p>
       <div className={styles["findOutlier__box"]}>
         <input className={styles["findOutlier__box-input"]} onChange={handleSave} value={practice} type="text" />
-        <span>{`=> ${findOutlier(practice)}`}</span>
+        <span className={styles["findOutlier__box-text"]}>{`=> ${findOutlier(practice)}`}</span>
       </div>
     </div>
   )
