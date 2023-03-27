@@ -1,3 +1,9 @@
+@mixin desktop {
+    @media(max-width: 768px) {
+        @content;
+    }
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -11,6 +17,10 @@
     align-items: center;
     z-index: 2;
 
+    @include desktop() {
+        padding: 0 22px 0 24px;
+    }
+
     &__link {
         text-decoration: none;
 
@@ -20,12 +30,28 @@
             z-index: 1;
             cursor: pointer;
 
-            &-image {
+            &-icon {
                 display: block;
                 width: 100%;
                 height: 100%;
                 aspect-ratio: 1/1;
                 object-fit: cover;
+
+                @include desktop() {
+                    display: none;
+                }
+            }
+
+            &-text {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 153/24;
+                object-fit: cover;
+                display: none;
+
+                @include desktop() {
+                    display: block;
+                }
             }
         }
     }
