@@ -17,10 +17,6 @@
     align-items: center;
     z-index: 2;
 
-    @include desktop() {
-        padding: 0 22px 0 24px;
-    }
-
     &__link {
         text-decoration: none;
 
@@ -35,7 +31,7 @@
                 width: 100%;
                 height: 100%;
                 aspect-ratio: 1/1;
-                object-fit: cover;
+                object-fit: contain;
 
                 @include desktop() {
                     display: none;
@@ -46,7 +42,7 @@
                 width: 100%;
                 height: 100%;
                 aspect-ratio: 153/24;
-                object-fit: cover;
+                object-fit: contain;
                 display: none;
 
                 @include desktop() {
