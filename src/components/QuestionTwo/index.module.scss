@@ -15,4 +15,18 @@
         box-sizing: border-box;
         width: 100%;
     }
+
+    p {
+        color: #000;
+        font: normal normal 16px/40px sans-serif;
+        letter-spacing: 1px;
+    }
+
+    ul {
+        li {
+            color: #000;
+            font: normal normal 16px/40px sans-serif;
+            letter-spacing: 1px;
+        }
+    }
 }

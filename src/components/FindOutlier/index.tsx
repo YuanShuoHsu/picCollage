@@ -6,7 +6,11 @@ export default function FindOutlier() {
   const [practice, setPractice] = useState("")
 
   const handleSave = (event: ChangeEvent<HTMLInputElement>) => {
-    setPractice(event.target.value)
+    const inputValue = event.target.value;
+    const regex = /^[0-9\s]*$/;
+    if (regex.test(inputValue)) {
+      setPractice(inputValue);
+    }
   }
 
   const inputString1 = "10 9 8 6 4 2"
@@ -36,7 +40,7 @@ export default function FindOutlier() {
       <p>{`${inputString2} => ${findOutlier(inputString2)}`}</p>
       <div className={styles["findOutlier__box"]}>
         <input className={styles["findOutlier__box-input"]} onChange={handleSave} value={practice} type="text" />
-        <span className={styles["findOutlier__box-text"]}>{`=> ${findOutlier(practice)}`}</span>
+        <span className={styles["findOutlier__box-text"]}>{` ${"  "} => ${findOutlier(practice)}`}</span>
       </div>
     </div>
   )

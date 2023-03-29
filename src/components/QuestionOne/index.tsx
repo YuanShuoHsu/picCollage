@@ -6,25 +6,26 @@ export default function QuestionOne() {
 
     const example = `inputString1 = "10 9 8 6 4 2"
 inputString2 = "7 9 1 6 3 5"
+
 console.log(findOutlier(inputString1)) // 2
 console.log(findOutlier(inputString2)) // 4
 `
 
     const answer = `function findOutlier(inputString) {
-  const numbers = inputString.split(" ").map(Number);
-  const parity = getParity(numbers.slice(0, 3));
+    const numbers = inputString.split(" ").map(Number);
+    const parity = getParity(numbers.slice(0, 3));
 
-  for (let i = 0; i < numbers.length; i++) {
-      if (getParity([numbers[i]]) !== parity) {
-          return i + 1;
-      }
-  }
+    for (let i = 0; i < numbers.length; i++) {
+        if (getParity([numbers[i]]) !== parity) {
+            return i + 1;
+        }
+    }
 }
 
 function getParity(numbers) {
-  const even = numbers.filter(n => n % 2 === 0).length;
-  const odd = numbers.length - even;
-  return even > odd ? 'even' : 'odd';
+    const even = numbers.filter(n => n % 2 === 0).length;
+    const odd = numbers.length - even;
+    return even > odd ? 'even' : 'odd';
 }
 `
 
